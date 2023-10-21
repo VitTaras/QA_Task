@@ -1,0 +1,146 @@
+
+Case 1 v1/v2
+
+Description: Brakujace tytu³ów i ikony strzalek w rozwijanej liscie kraju zrodlowego i docelowego
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1/v2 w dowolnej przegladarce ( Chrome, FF, IE)
+- sprawdz wyglad etykiet do wyboru krajów 
+
+Actual: Brak nazw nad listami oraz ikon strza³ek do rozwijania listy
+Expected: Obie listy maj¹ tytu³ nad labelkami oraz ikony strza³ek 
+
+
+
+Case 2 v1/v2
+
+Description: Wartosci wiêksze ni¿ dwa miejsca po przecinku s¹ zapisywane w pamieci podrecznej przegladarki i zakr¹glane dopiero po prze³adowaniu przegladarki 
+
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1/v2 w dowolnej przegladarce ( Chrome, FF, IE)
+- wpisz w dowolnym polu liczbê d³u¿sz¹ niz 3 cyfry po przecinku
+
+Expected: zakres jest 100 wiêc powinien zostac wprowadzony limit 2 znaków przed i 2 po przecinku ( plus 100 jako jedyna liczba 3 cyfrowa) 
+
+Actual: mo¿na wprowadziæ dowolna iloœ znaków 
+
+
+
+
+
+
+
+
+
+Case 3 v1/v2
+
+Description: Zakres stawek wed³ug opisu powinien byæ z zakresu (0.100> co oznacza zakres prawostronie domkniety 0 nie wchodzi do zakresu natomiast 100 wchodzi i powinno byæ akceptowaln¹ liczb¹ 
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1/v2 w dowolnej przegladarce ( Chrome, FF, IE)
+- wpisz liczbê 100 w dowolne pole 
+
+Expected: liczba 100 jest akceptowana i zapisywana 
+
+Actual: pop-up informuje ¿e rating jest niepoprawny 
+
+
+Case 4 v1 tylko
+
+Description: Nieprawid³owy wygl¹d nag³owków wierszy i kolumn 
+
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1 w dowolnej przegladarce ( Chrome, FF, IE)
+- sprawdz wygl¹d tabeli 
+
+Expected: 
+- wymagany scrolbar w poziomie i pionie 
+- kolumna pierwsza i pierwszy wiersz nieruchome podczas scrolowania 
+
+Actual:
+- scrolbar jest w tabeli jest tylko w pionie
+-  kolumna pierwsza i pierwszy wiersz NIE s¹ nieruchome podczas scrolowania 
+- w dodatkowo komórki krajów ¿ród³owych zawieraja niepotrzbne paski scroll 
+
+
+
+Cas 5 v1/v2
+
+Description: Aktywna komórka oraz odpowiadaj¹ce jej nag³ówki kolumn i wierszy zmianiaj¹ border size ale background color zmienia siê tylko dla odpowiedniego kraju docelowego
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1 w dowolnej przegladarce ( Chrome, FF, IE)
+- zaznacz dowolne pole
+
+Ekspekted: t³o w odpowiednim kraju zrod³owym I docelowym a takze zaznaczonej komorce zmienia sie tak jak na mocu
+
+Actual: zmienia sie tylko tlo zaznaczonej komorki kraju docelowego 
+
+
+
+Case 6 v1/v2
+
+Description: Wybór kraju docelowego nie dzia³a poprawnie 
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1 w dowolnej przegladarce ( Chrome, FF, IE)
+- wybierz dowolny kraj docelow 
+- usun wybrany kraj docelowy
+
+Expected: 
+
+- wybrany kraj jest widoczny w selektorze 
+- zwezona tabela zawiera jedna kolumne 
+
+Actual:
+- pole wyboru kraju jest nieczytelne i zle sezkalowane
+- tavela jest rozjechana zawiera dziwne pading 
+- po usunieciu kraju docelowego w consoli widoczne bledy 
+- dodatkowo w wersji v2 znika po lewej napis kraj zrodlowy
+
+
+
+Case 7  v1 ( v2 nag³owek kraju docelowego znika zupe³nie) 
+
+Description: Po wyborze 1 krju ¿ródlowego i 1 docelowego nag³owki wierszy i kolumn s¹ Ÿle umiejscowione
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1 w dowolnej przegladarce ( Chrome, FF, IE)
+- wybierz dowolny kraj zrodlowy I docelowy 
+Expected: Lagenda tabeli jest zawsze po lewej stronie i na tabela
+Actual: legenda tabeli zle skalowalne i przemieszcza siê lewy napis nad tabele 
+
+
+
+
+
+
+
+
+Case 8 v1/v2 v3???
+Description: Nie da siê zapisac niepoprawnego formatu np. 12e jak na mocu, dostajemy informacje o nieprawidlowym formacie i zmiana nie jest zapisana 
+
+Step to reproduce:
+- otwórz aplikacje w wersji v1 w dowolnej przegladarce ( Chrome, FF, IE)
+- wpisz liczbe z niepoprawnym znakiem zamiast cyfry ( znak specjalny lub litera)
+
+Expected: Znak rating jest zapisany ale zaznaczony jako nieprawidlowy 
+Actual: Nie da siê zapisac takiego znaku. W werrsji v3 znak jest zapisany ale po przeladowaniu znika nie wiem czy to jest poprawne czy nie 
+
+Case 9 v1 
+Describtion: Aplikacja nie jest skalowana do wersji mobilnych 
+
+
+
+Case 10
+Jeœli chodzi o wersje V3, wlasciwie jedyny blad jaki wylapalem ze nag³owek poziomy nie zawsze pozostaje widoczny/nieruchomy podczas przewijania na wersji mobilnej + nie zapisywanie ratingów ze znakiem innym ni¿ cyfra z casa 8 
+
+
+
+
+
+
+
+
